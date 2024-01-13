@@ -34,6 +34,9 @@ button {
   font-size: 20px;
   font-weight: 500;
   line-height: 125%;
+  display: inline-block;
+  padding: 20px 32px;
+  border-radius: 16px;
 }
 
 .container {
@@ -292,9 +295,7 @@ button {
       
       figure {
         text-align: center;
-        img {
-          
-        }
+        
         figcaption {
           font-size: 24px;
           font-weight: 600;
@@ -305,27 +306,88 @@ button {
 }
 
 .prices {
+  
   &__text {
-    width: 600px;
+    max-width: 600px;
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 40px;
   }
 
-  .prices__cards {
+  &__cards {
     display: flex;
-    margin: 0 auto;
+    gap: 22px;
 
     .card {
-      .button {
-        background-color: #FFBA00;
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 125%;
+      width: 588px;
+      min-height: 699px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px 55px 88px;
+      border: 2px solid #FFBA00;
+      
+      &__headling {
+        font-size: 36px;
+        font-weight: 600;
+        margin-left: 54px;
+        margin-bottom: 40px;
+      }
+
+      .list {
+        margin-left: 100px;
+        &__item {
+          max-width: 300px;
+          font-size: 24px;
+          font-weight: 600;
+          list-style-type: disc;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 60px;
+          }
+        }
+      }
+
+        &__content--bottom {
+          text-align: center;
+
+        span {
+          font-size: 36px;
+          font-weight: 700;
+          text-align: center;
+          sup {
+            vertical-align: super;
+            font-size: 20px;
+          }
+        }
+        
+        .button {
+          width: 100%;
+          display: block;
+          background-color: #FFBA00;
+          font-family: 'Inter', sans-serif;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 125%;
+          color: #0C3E2E;
+          margin-top: 40px;
+          padding: 20px 32px;
+        }
       }
     }
 
+  }
+}
+
+.work-step {
+  &__list {
+    
+    display: flex;flex-wrap: wrap;
+
+    .step {
+      list-style-type: decimal;
+    }
   }
 }
 

@@ -26,6 +26,9 @@ button {
   font-size: 20px;
   font-weight: 500;
   line-height: 125%;
+  display: inline-block;
+  padding: 20px 32px;
+  border-radius: 16px;
 }
 
 .container {
@@ -233,21 +236,74 @@ button {
 }
 
 .prices__text {
-  width: 600px;
+  max-width: 600px;
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 40px;
 }
-.prices .prices__cards {
+.prices__cards {
   display: flex;
-  margin: 0 auto;
+  gap: 22px;
 }
-.prices .prices__cards .card .button {
+.prices__cards .card {
+  width: 588px;
+  min-height: 699px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 55px 88px;
+  border: 2px solid #FFBA00;
+}
+.prices__cards .card__headling {
+  font-size: 36px;
+  font-weight: 600;
+  margin-left: 54px;
+  margin-bottom: 40px;
+}
+.prices__cards .card .list {
+  margin-left: 100px;
+}
+.prices__cards .card .list__item {
+  max-width: 300px;
+  font-size: 24px;
+  font-weight: 600;
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+.prices__cards .card .list__item:last-child {
+  margin-bottom: 60px;
+}
+.prices__cards .card__content--bottom {
+  text-align: center;
+}
+.prices__cards .card__content--bottom span {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+.prices__cards .card__content--bottom span sup {
+  vertical-align: super;
+  font-size: 20px;
+}
+.prices__cards .card__content--bottom .button {
+  width: 100%;
+  display: block;
   background-color: #FFBA00;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 125%;
+  color: #0C3E2E;
+  margin-top: 40px;
+  padding: 20px 32px;
+}
+
+.work-step__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-step__list .step {
+  list-style-type: decimal;
 }
 
 /*---------------------------------------------------*/
