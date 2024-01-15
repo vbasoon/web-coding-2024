@@ -301,9 +301,13 @@ button {
 .work-step__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .work-step__list .step {
-  list-style-type: decimal;
+  display: flex;
+  font-size: 28px;
+  align-items: center;
+  border: 2px solid green;
 }
 
 /*---------------------------------------------------*/

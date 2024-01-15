@@ -384,9 +384,22 @@ button {
   &__list {
     
     display: flex;flex-wrap: wrap;
-
+    justify-content: space-around;
     .step {
-      list-style-type: decimal;
+      display: flex;
+      font-size: 28px;
+      
+      align-items: center;
+      border: 2px solid green;
+      
+      // span {
+      //   font-family: 'Kaisei Decol', serif;
+      //   font-weight: 400;
+      //   font-size: 128px;
+      //   color: rgba(109, 151, 115, 0.20);
+      //   -webkit-text-stroke: 0.25px #0C3E2E;
+      //   margin-left: 50px;
+      // }
     }
   }
 }
