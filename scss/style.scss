@@ -431,11 +431,93 @@ button {
 }
 
 .team {
-  &__cards {
-    .member {
-
+  &__text {
+    display: flex;
+    max-width: 100%;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    gap: 88px;
+    
+    p{
+      max-width: 524px;
+     
     }
   }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: 0 50px;
+    .member {
+      width: 200px;
+
+      img {
+        border: 2px solid #FFBA00;
+      }
+
+      &__info {
+        padding: 10px 0 15px;
+        text-align: center;
+      }
+
+      &__descr {
+        text-align: center;
+        font-size: 18px;
+        
+      }
+    }
+  }
+}
+
+.faq {
+  margin-bottom: 110px;
+  .accordion {
+    column-count: 2;
+    gap: 0 22px;
+    &__item {
+      margin-bottom: 40px;
+    }
+    &__title {
+      font-size: 24px;
+      margin-bottom: 16px;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      text-align: left;
+      padding-right: 70px;
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      &::after {
+        position: absolute;
+        top: 5px;
+        right: 45px;
+        content: '';
+        background-image: url('../images/arrow-down.svg');
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 28px;
+
+      }
+    }
+    &__descr {
+      display: none;
+    }
+  }
+}
+
+.cta {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__subtitle {}
+  &__text {}
+  &__form {
+
+  }
+  &__buttons {}
+  &__gallery {}
 }
 
 
