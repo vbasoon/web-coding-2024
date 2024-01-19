@@ -243,7 +243,7 @@ button {
 }
 
 .prices__text {
-  max-width: 600px;
+  max-width: 100%;
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 40px;
@@ -474,7 +474,11 @@ button {
 .cta__link {
   display: flex;
   align-items: center;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  font-family: "Inter", sans-serif;
+  color: #0C3E2E;
 }
 .cta__link span {
   border-bottom: 1px solid #0C3E2E;
@@ -495,6 +499,65 @@ button {
 .cta .gallery img:last-child {
   grid-column: 1/-1;
 }
+
+.contacts__content {
+  align-self: start;
+}
+.contacts__text {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.contacts__info {
+  line-height: auto;
+}
+.contacts__info p {
+  margin-bottom: 20px;
+}
+.contacts__info:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  background-color: rgba(27, 208, 53, 0.1);
+  padding: 40px 0 47px;
+}
+.footer__inner {
+  display: flex;
+  justify-content: center;
+}
+.footer__left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__right {
+  flex: 1 1 50%;
+  padding-left: 30px;
+}
+.footer .menu__item {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer .social {
+  display: flex;
+  gap: 16px;
+}
+.footer .logo img {
+  width: 137px;
+  height: 87px;
+  margin-bottom: 42px;
+}
+.footer__slogan {
+  max-width: 230px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
 /*---------------------------------------------------*/
 h2 {
   color: green;

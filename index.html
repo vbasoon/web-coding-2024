@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GreenWave</title>
   <link href="CSS/reset.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link href="CSS/style.min.css" rel="stylesheet">
 </head>
 
@@ -175,7 +176,7 @@
       <section class="section prices">
         <div class="container">
           <h2 class="section__title prices__title">Тарифи і ціни</h2>
-          <p class="prices__text">Ми працюємо з усіма типами просторів. Зверніться до нас, щоб створити ваш ідеальний ландшафт.</p>
+          <p class="prices__text">Команда зеленого дизайну може розглянути бажання клієнта та створити індивідуальний пакет послуг, який відповідає їхнім очікуванням та бюджету.</p>
           <div class="prices__cards plans">
           <article class="card">
             <div class="card__content--top">
@@ -370,32 +371,37 @@
           </div>
         </div>
       </section>
-      <section class="section gallery">
+      <section class="section reviews">
         <div class="container">
-          <div class="gallery-image">
+          <h2 class="section__title contacts__title">Наші відгуки</h2>
+          <div class="review__slider slider">
+            <div class="slider__wrapper">
 
+            </div>
+            
           </div>
         </div>
       </section>
       <section class="section contacts">
         <div class="container">
-          <div class="section__inner">
-            <img class="section__image" src="images/image4.png" alt="child">
+          <h2 class="section__title contacts__title">Контакти</h2>
+          <div class="section__inner contacts__inner">
+            <img class="section__image contacts__image" src="images/image4.png" alt="child">
             <div class="section__content contacts__content content">
               <p class="contacts__text">
                 Зателефонуйте зараз та розпочніть трансформацію вашого саду у справжній рай на землі!
               </p>
-              <address class="contacts__address address">
+              <address class="contacts__info info">
                 <div class="tel">
-                  <p>Телефон</p>
+                  <span>Телефон</span>
                   <p>+38 099 299 996</p>
                 </div>
                 <div class="address">
-                  <p>Адреса</p>
+                  <span>Адреса</span>
                   <p>м. Київ, вул. Зелена, 5б</p>
                 </div>
                 <div class="schedule">
-                  <p>Графік роботи</p>
+                  <span>Графік роботи</span>
                   <p>пн-сб з 10:00 до 20:00</p>
                 </div>
               </address>
@@ -405,7 +411,46 @@
       </section>
     </main>
     
-    <footer class="footer">footer</footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner inner">
+          <div class="footer__left">
+            <nav class="footer__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Про нас</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Проєкти</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Послуги</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Ціни</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="social">
+              <a href="#"><img src="images/icons/telegram.svg" alt="telegram"></a>
+              <a href="#"><img src="images/icons/instagram.svg" alt="instagram"></a>
+              <a href="#"><img src="images/icons/facebook.svg" alt="facebook"></a>
+            </div>
+          </div>
+          <div class="footer__right">
+            <a class="logo" href="#">
+              <img src="images/logo-svg.svg" alt="logo__img" width="100">
+            </a>
+            <p class="footer__slogan">
+              Реалізуйте Ваші зелені мрії з нами
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 
 </body>
