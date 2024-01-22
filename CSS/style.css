@@ -500,6 +500,29 @@ button {
   grid-column: 1/-1;
 }
 
+.reviews .slider__wrapper .card {
+  max-width: 600px;
+  font-size: 24px;
+}
+.reviews .slider__wrapper .card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  min-height: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.reviews .slider__wrapper .card__header .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.reviews .slider__wrapper .card__content {
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .contacts__content {
   align-self: start;
 }
@@ -556,6 +579,34 @@ button {
   max-width: 230px;
   font-size: 28px;
   font-weight: 600;
+}
+
+/*--------Swiper-------------------------------------*/
+.swiper {
+  width: 100%;
+  height: 300px;
+  padding-bottom: 50px;
+}
+
+.reviews__control {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.review-prev,
+.review-next {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.review-prev {
+  transform: translateX(-100%);
+}
+
+.review-next {
+  transform: translateX(70%);
 }
 
 /*---------------------------------------------------*/
