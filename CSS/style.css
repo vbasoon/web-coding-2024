@@ -51,6 +51,10 @@ button {
   font-weight: 600;
 }
 
+.decor-image {
+  position: absolute;
+}
+
 .header {
   background-image: url("../images/header1920-svg.svg");
   background-repeat: no-repeat;
@@ -166,6 +170,18 @@ button {
   margin-bottom: 5px;
 }
 
+.why_we .container {
+  position: relative;
+}
+.why_we .container .decor-image--water-pan {
+  top: -202px;
+  left: -98px;
+  transform: rotateZ(8deg);
+}
+.why_we .container .decor-image--water-pan img {
+  display: block;
+  max-width: 232px;
+}
 .why_we__text {
   width: 600px;
   font-size: 28px;
