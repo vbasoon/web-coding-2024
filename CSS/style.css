@@ -13,6 +13,7 @@ body {
   line-height: 1.25;
   font-family: "Inter", sans-serif;
   color: #0C3E2E;
+  background-color: #FBFDF8;
 }
 
 a {
@@ -53,6 +54,7 @@ button {
 
 .decor-image {
   position: absolute;
+  z-index: -1;
 }
 
 .header {
@@ -174,13 +176,16 @@ button {
   position: relative;
 }
 .why_we .container .decor-image--water-pan {
-  top: -202px;
-  left: -98px;
-  transform: rotateZ(8deg);
+  top: -220px;
+  left: -100px;
 }
 .why_we .container .decor-image--water-pan img {
   display: block;
-  max-width: 232px;
+  max-width: 200px;
+}
+.why_we .container .decor-image--leaf1 {
+  top: -50px;
+  right: -120px;
 }
 .why_we__text {
   width: 600px;
@@ -204,6 +209,16 @@ button {
   margin-bottom: 0;
 }
 
+.projects .container {
+  position: relative;
+}
+.projects .container .decor-image--vector1 {
+  top: -316px;
+  left: -120px;
+}
+.projects .container .decor-image--vector1 img {
+  border: 1px solid green;
+}
 .projects__text {
   width: 600px;
   font-size: 28px;
@@ -258,11 +273,21 @@ button {
   font-weight: 600;
 }
 
+.prices .container {
+  position: relative;
+}
+.prices .container .decor-image--vector2 {
+  top: 50px;
+  right: -200px;
+}
+.prices .container .decor-image--vector2 img {
+  border: 1px solid green;
+}
 .prices__text {
   max-width: 100%;
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 .prices__cards {
   display: flex;
@@ -323,6 +348,16 @@ button {
 
 .work-step {
   margin-bottom: 150px;
+}
+.work-step .container {
+  position: relative;
+}
+.work-step .container .decor-image--leaf2 {
+  top: 200px;
+  right: -200px;
+}
+.work-step .container .decor-image--leaf2 img {
+  border: 1px solid green;
 }
 .work-step__list {
   max-width: 1070px;
@@ -388,6 +423,16 @@ button {
 
 .faq {
   margin-bottom: 110px;
+}
+.faq .container {
+  position: relative;
+}
+.faq .container .decor-image--vector3 {
+  top: -72px;
+  left: -200px;
+}
+.faq .container .decor-image--vector3 img {
+  border: 1px solid green;
 }
 .faq .accordion {
   -moz-column-count: 2;
@@ -539,6 +584,28 @@ button {
   font-weight: 600;
 }
 
+.contacts .container {
+  padding: 0;
+  position: relative;
+}
+.contacts .container .decor-image--leaf3 {
+  top: -350px;
+  left: -240px;
+}
+.contacts .container .decor-image--leaf3 img {
+  border: 1px solid green;
+}
+.contacts .container .decor-image--leaf4 {
+  top: 220px;
+  right: -75px;
+  max-width: 100%;
+  height: 470px;
+}
+.contacts .container .decor-image--leaf4 img {
+  max-width: 100%;
+  height: 250px;
+  border: 1px solid green;
+}
 .contacts__content {
   align-self: start;
 }
