@@ -10,7 +10,7 @@ html {
 body {
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.2;
   font-family: "Inter", sans-serif;
   color: #0C3E2E;
   background-color: #FBFDF8;
@@ -114,13 +114,13 @@ button {
 .header .hero__title {
   margin-top: 20px;
   margin-bottom: 75px;
-  width: 428px;
+  max-width: 428px;
   font-size: 48px;
   font-weight: 600;
 }
 .header .hero__text {
   margin-bottom: 20px;
-  width: 510px;
+  max-width: 510px;
 }
 .header .hero__text span {
   color: #CC2E2E;
@@ -130,7 +130,12 @@ button {
   padding: 20px 32px;
   border-radius: 16px;
 }
+.header .hero__content {
+  flex: 1 0 50%;
+}
 .header .hero__image {
+  flex: 0 1 50%;
+  max-width: 100%;
   margin-bottom: 40px;
 }
 
