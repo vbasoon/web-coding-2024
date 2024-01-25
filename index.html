@@ -15,12 +15,18 @@
     <header class="header">
       <div class="header__container container">
         <div class="header__inner">
+          
           <div class="header__top">
             <a class="logo" href="#">
               <img src="images/logo-svg.svg" alt="logo__img" width="100">
             </a>
 
             <nav class="header__navbar menu">
+              <button class="menu__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" viewBox="0 0 70 60" fill="none">
+                <path d="M11.6667 15H58.3333M11.6667 30H58.3333M11.6667 45H58.3333" stroke="#0C3E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
               <ul class="menu__list">
                 <li class="menu__item">
                   <a class="menu__link" href="#">Про нас</a>
@@ -41,29 +47,32 @@
 
             </nav>
 
-            <address class="header__address">
-              <a class="phone" href="tel:+380995505555">tel: (099)550-55-55</a>
+            <address class="header__address phone">
+              <a class="phone__link" href="tel:+380995505555">tel: (099)550-55-55</a>
             </address>
           </div>
           <div class="header__hero hero">
             <div class="hero__content">
-              <span class="hero__top">Ми працюємо на всій території України </span>
+              <p class="hero__slogan">Ми працюємо на всій території України </p>
               <h1 class="hero__title">Реалізуйте Ваші зелені мрії з нами</h1>
-              <p class="hero__text text">Почніть ваше ландшафтне втілення з нами 
+              <p class="hero__text hero__text--desktop text">Почніть ваше ландшафтне втілення з нами 
                 та отримайте перший рік обслуговування абсолютно <span>безкоштовно!</span>
               </p>
-              <a class="hero__cta button" href="#">Замовити проєкт</a>
+              <a class="hero__cta hero__cta--desktop button" href="#">Замовити проєкт</a>
 
             </div>
             <div>
               <img class="hero__image" src="images/image.png" alt="green land">
             </div>
             
-
           </div>
-          <p class="header__bottom">Садова магія кожного сезону</p>
+
+          <div class=header__bottom>
+          <p class="header__bottom-slogan header__bottom-slogan--desktop">Садова магія кожного сезону</p>
+          <p class="header__bottom-text header__bottom-text--mobile text">Отримайте перший рік обслуговування абсолютно <span>безкоштовно!</span>
+              </p>
+          <button class="header__bottom-cta button">Замовити проєкт</button>
         </div>
-      </div>
 
     </header>
     <!--  
