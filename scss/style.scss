@@ -188,6 +188,7 @@ button {
 }
 
 .section {
+  overflow-x: hidden;
   margin-bottom: 150px;
   &__title {
     font-size: 36px;
@@ -266,27 +267,41 @@ button {
     margin-bottom: 40px;
   }
 
-  .list {
-    &-item {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 55px;
-      padding-left: 10px;
-      &:nth-child(2),
-      &:nth-child(5) {
-        margin-left: 64px;
+  &__image {
+    //max-width: 100%;
+  }
+  
+  .content {
+    .list {
+      list-style-type: none;
+      counter-reset: my-counter;
+       &-item {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 55px;
+        padding-left: 10px;
+        &:nth-child(2),
+        &:nth-child(5) {
+          margin-left: 64px;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-left: 102px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before {
+          content: counter(my-counter);
+          counter-increment: my-counter;
+          padding-right: 6px;
+        }
       }
 
-      &:nth-child(3),
-      &:nth-child(4) {
-        margin-left: 102px;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
 
-
+   
   } 
 }
 
@@ -947,6 +962,7 @@ button {
 @media (max-width: 998px) {
 
   .container {
+    position: relative;
     max-width: 960px;
   }
 
@@ -991,6 +1007,7 @@ button {
   }
   }
   .about {
+    margin-bottom: 70px;
     &__content {
         flex: 1 1 60%;
         .info {
@@ -1016,6 +1033,67 @@ button {
 
      
   }
+
+  .why_we {
+    padding-top: 30px;
+    overflow-x: hidden;
+    // overflow-y: auto;
+    .container {
+      
+    .decor-image {
+      &--water-pan {
+        max-width: 235px;
+        position: absolute;
+        left: 730px;
+        top: -30px;
+        transform: rotateY(180deg);
+      }
+      &--leaf1 {
+        display: none;
+      }
+    }
+    }
+
+  
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    &__image {
+      flex: 0 1 40%;
+      max-width: 50%;
+    }
+
+    &__content {
+      flex: 1 1 60%;
+    }
+
+    .content {
+      
+      .list {
+        &-item {
+          font-size: 24px;
+          &:nth-child(2),
+          &:nth-child(5) {
+            margin-left: 60px;
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-left: 102px;
+          }
+        }
+      }
+    }
+  }
+
+//   .decor-image--water-pan img {
+//     display: block;
+//   position: absolute;
+//   right: 100px;
+// }
 
   
 }
@@ -1119,6 +1197,17 @@ button {
     //padding: 40px 0;
   }
 
+  .section {
+    &__inner {
+      gap: 0;
+
+    }
+    &__title {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+  }
+
   .section,
   .header {
     margin-bottom: 90px;
@@ -1136,7 +1225,8 @@ button {
       }
 
       &__title {
-        font-size: 2rem;
+        max-width: 254px;
+        font-size: 28px;
         margin-bottom: 25px;
       }
 
@@ -1173,6 +1263,33 @@ button {
   .about {
     &__title {
       text-align: center;
+    }
+  }
+
+  .why_we {
+    &__text {
+      max-width: 410px;
+      font-size: 24px;
+    }
+    &__image {
+      max-width: 340px;
+    }
+    .content {
+      .list {
+        &-item {
+          font-size: 18px;
+          margin-bottom: 40px;
+          &:nth-child(2),
+          &:nth-child(5) {
+            margin-left: 46px;
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-left: 74px;
+          }
+        }
+      }
     }
   }
 }
@@ -1241,12 +1358,52 @@ button {
 
   
   }
+
+  .why_we {
+    &__text {
+      font-size: 24px;
+    }
+    &__image {
+      max-width: 50%;
+    }
+    .content {
+      .list {
+        &-item {
+          font-size: 1rem;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+   .why_we {
+    
+    &__image {
+      max-width: 40%;
+    }
+    .content {
+      .list {
+        &-item {
+          
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .section {
+    &__title {
+      font-size: 24px;
+    }
   }
 
   .section,
@@ -1280,13 +1437,18 @@ button {
       &__content {
         //padding-top: 20px;
       }
-      &__slogan {
-        text-align: center;
+
+      
+      &__title {
+        margin-top: 12px;
+        margin-bottom: 12px;
         max-width: 100%;
       }
 
-      &__title {
+      &__slogan {
+        text-align: center;
         max-width: 100%;
+        margin-bottom: 0;
       }
 
       &__text {
@@ -1322,32 +1484,53 @@ button {
   .about {
     &__image {
       margin-bottom: 20px;
+      max-width: 90%;
+    }
+    &__title {
+      font-size: 28px;
     }
     .info {
       dt {
         font-size: 28px;
       }
     }
-    &__image {
-        max-width: 90%;
-        
-      }
+    
   }
 
-}
+  .why_we {
+    
+    &__image {
+      max-width: 40%;
+    }
 
- 
-  .header {
-    .hero {
-      &__slogan {
-        margin-bottom: 0;
-      }
-      &__title {
-        margin-top: 12px;
-        margin-bottom: 12px;
+     &__text {
+      font-size: 16px;
+      max-width: 280px;
+    } 
+    
+
+    .content {
+      .list {
+        &-item {
+          font-size: 14px;
+          margin-bottom: 10px;
+          //margin-left: 32px;
+
+          &:nth-child(2),
+          &:nth-child(5) {
+            margin-left: 15px;
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-left: 31px;
+          }
+        }
       }
     }
   }
+
+}
 
   @media (max-width: 360px) {
 
@@ -1382,6 +1565,21 @@ button {
       dd {font-size: 14px;}
     }
     }
+
+    .why_we {
+    
+    &__text {
+      font-size: 14px;
+    } 
+
+    .content {
+      .list {
+        &-item {
+          font-size: 60%;
+        }
+      }
+    }
+  }
 
     
   }
