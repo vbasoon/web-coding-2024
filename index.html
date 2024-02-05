@@ -118,7 +118,7 @@
           <h2 class="section__title why_we__title">Чому ми?</h2>
           <p class="why_we__text">Ви обираєте якість, креативність та натхнення для вашого саду.</p>
           <div class="section__inner">
-            <img class="section__image why_we__image" src="images/image3.png" alt="worker">
+            <div class="section__image why_we__image"><img src="images/image3.png" alt="worker"></div>
             <div class="section__content why_we__content content">
               <ol class="content-list list">
                 <li class="list-item">Досвід</li>
@@ -134,7 +134,7 @@
           <img class="decor-image decor-image--leaf1" src="images/decor/decor-2.svg" alt="leaf">
         </div>
       </section>
-        <!--
+        
       <section class="section projects">
         <div class="container">
           <h2 class="section__title projects__title">Наші проекти</h2>
@@ -160,38 +160,46 @@
           <img class="decor-image decor-image--vector1" src="images/decor/decor-3.svg" alt="vector">
         </div>
       </section>
-      <section class="section services">
+     
+      <section class="services">
         <div class="container">
           <h2 class="section__title services__title">Послуги</h2>
           <p class="services__text">Ми працюємо з усіма типами просторів. Зверніться до нас, щоб створити ваш ідеальний ландшафт.</p>
           <ul class="section__content cards">
             <li class="cards_item card">
-              <figure>
+              <figure class="card__image">
                 <img src="images/services/icon1.svg" alt="icon1" width="200">
-                <figcaption>Ландшафтний дизайн</figcaption>
+                <figcaption class="card__text">Ландшафтний дизайн</figcaption>
               </figure>
             </li>
             <li class="cards_item card">
-              <figure>
-                <img src="images/services/icon2.svg" alt="icon1" width="200">
-                <figcaption>Трав’янисті покриття</figcaption>
+              <figure class="card__image">
+                <img src="images/services/icon2.svg" alt="icon2" width="200">
+                <figcaption class="card__text">Трав’янисті покриття</figcaption>
               </figure>
             </li>
-            <li class="cards_item card">
+            <!-- <li class="cards_item card">
               <figure>
-                <img src="images/services/icon3.svg" alt="icon1" width="200">
+                <img src="images/services/icon3.svg" alt="icon3" width="200">
                 <figcaption>Системи поливу</figcaption>
               </figure>
+            </li> -->
+            <li class="cards_item card">
+              <figure class="card__image">
+                <img src="images/services/icon3.svg" alt="icon3" width="200">
+                <figcaption class="card__text">Системи поливу </figcaption>
+              </figure>
             </li>
             <li class="cards_item card">
-              <figure>
-                <img src="images/services/icon4.svg" alt="icon1" width="200">
-                <figcaption>Догляд за рослинами </figcaption>
+              <figure class="card__image">
+                <img src="images/services/icon4.svg" alt="icon4" width="200">
+                <figcaption class="card__text">Догляд за рослинами </figcaption>
               </figure>
             </li>
           </ul>
         </div>
       </section>
+       <!--
       <section class="section prices">
         <div class="container">
           <h2 class="section__title prices__title">Тарифи і ціни</h2>
