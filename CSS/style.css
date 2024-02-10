@@ -57,6 +57,10 @@ button {
   font-weight: 600;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .decor-image {
   position: absolute;
   z-index: -1;
@@ -326,12 +330,15 @@ button {
   text-align: center;
 }
 
+.prices {
+  padding-top: 160px;
+}
 .prices .container {
   position: relative;
 }
 .prices .container .decor-image--vector2 {
-  top: 50px;
-  right: -200px;
+  top: -152px;
+  right: -100px;
 }
 .prices .container .decor-image--vector2 img {
   border: 1px solid green;
@@ -352,20 +359,20 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 60px 55px 88px;
+  padding: 60px 20px 88px;
   border: 2px solid #FFBA00;
 }
 .prices__cards .card__headling {
+  text-align: center;
   font-size: 36px;
   font-weight: 600;
-  margin-left: 54px;
   margin-bottom: 40px;
 }
 .prices__cards .card .list {
-  margin-left: 100px;
+  margin-left: 10%;
 }
 .prices__cards .card .list__item {
-  max-width: 300px;
+  max-width: 100%;
   font-size: 24px;
   font-weight: 600;
   list-style-type: disc;
@@ -387,7 +394,6 @@ button {
   font-size: 20px;
 }
 .prices__cards .card__content--bottom .button {
-  width: 100%;
   display: block;
   background-color: #FFBA00;
   font-family: "Inter", sans-serif;
@@ -395,7 +401,7 @@ button {
   font-weight: 500;
   line-height: 125%;
   color: #0C3E2E;
-  margin-top: 40px;
+  margin: 40px auto 0;
   padding: 20px 32px;
 }
 
@@ -413,15 +419,17 @@ button {
   border: 1px solid green;
 }
 .work-step__list {
-  max-width: 1070px;
+  max-width: 100%;
   list-style-type: none;
   counter-reset: my-counter;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
 }
 .work-step__list .step {
+  border: 1px solid green;
+  max-width: 100%;
+  display: flex;
   position: relative;
   line-height: 185px;
   font-size: 28px;
@@ -441,6 +449,9 @@ button {
   letter-spacing: -12px;
   position: absolute;
   left: 0px;
+}
+.work-step__list--modify {
+  counter-reset: my-counter 3;
 }
 
 .team__text {
@@ -752,10 +763,6 @@ button {
     background-repeat: no-repeat;
     background-position: top center;
   }
-  .why_we .content .list-item {
-    font-size: clamp(14px, 3vw, 28px);
-    padding-left: 0;
-  }
 }
 @media (max-width: 1200px) {
   .about .info dt {
@@ -778,6 +785,47 @@ button {
   }
   .services .cards .card__text {
     font-size: 20px;
+  }
+  .prices__text {
+    max-width: 880px;
+    font-size: 28px;
+  }
+  .prices .card {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .prices .card .list {
+    margin-left: 0%;
+  }
+  .work-step {
+    margin-bottom: 150px;
+  }
+  .work-step__list {
+    max-width: 100%;
+    gap: 12px;
+  }
+  .work-step__list .step {
+    line-height: 185px;
+    font-size: 28px;
+    padding-left: 32px;
+  }
+  .work-step__list .step:last-child {
+    margin-left: 0px;
+  }
+  .work-step__list .step::before {
+    content: counter(my-counter, decimal-leading-zero);
+    counter-increment: my-counter;
+    font-size: 96px;
+    font-family: "Kaisei Decol", serif;
+    color: rgba(27, 208, 53, 0.1);
+    -webkit-text-stroke: 0.25px #0C3E2E;
+    font-weight: 400;
+    letter-spacing: -12px;
+    position: absolute;
+    left: 0px;
+  }
+  .work-step__list--modify {
+    counter-reset: my-counter 3;
   }
 }
 @media (max-width: 1100px) {
@@ -895,6 +943,59 @@ button {
   .services__text {
     margin-bottom: 36px;
   }
+  .prices__text {
+    margin-bottom: 50px;
+  }
+  .prices__cards {
+    gap: 10px;
+  }
+  .prices .card {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+  .prices .card .list {
+    margin-left: 10px;
+  }
+  .prices .card .list__item {
+    font-weight: 400;
+    font-size: 22px;
+  }
+  .work-step {
+    margin-bottom: 150px;
+  }
+  .work-step__list {
+    max-width: 100%;
+    gap: 12px;
+  }
+  .work-step__list .step {
+    line-height: 185px;
+    font-size: clamp(24px, 3vw, 18px);
+    padding-left: 32px;
+  }
+  .work-step__list .step:last-child {
+    margin-left: 0px;
+  }
+  .work-step__list .step::before {
+    font-size: 96px;
+    letter-spacing: -12px;
+    left: 0px;
+  }
+  .work-step__list--modify {
+    counter-reset: my-counter 3;
+  }
+}
+@media (max-width: 890px) {
+  .work-step__list {
+    max-width: 100%;
+  }
+  .work-step__list .step {
+    max-width: 90%;
+    font-size: 22px;
+    padding-left: 32px;
+  }
+  .work-step__list .step::before {
+    font-size: 64px;
+  }
 }
 @media (max-width: 840px) {
   .header {
@@ -972,10 +1073,36 @@ button {
   .about .info dt {
     font-size: 36px;
   }
+  .prices__text {
+    font-size: 24px;
+  }
+  .prices__cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .prices__cards .card {
+    max-width: 470px;
+  }
+  .prices__cards .card__headling {
+    font-size: clamp(24px, 4vw, 28px);
+  }
+  .prices__cards .card .list__item {
+    font-size: clamp(14px, 4vw, 18px);
+  }
+  .work-step__list .step {
+    font-size: 20px;
+    line-height: 85px;
+    padding-left: 32px;
+  }
+  .work-step__list .step::before {
+    font-size: 64px;
+  }
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 688px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .section__inner {
     gap: 0;
@@ -1064,10 +1191,6 @@ button {
     padding-top: 36px;
     padding-bottom: 36px;
   }
-  .services {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
   .services__text {
     max-width: 500px;
     font-size: 24px;
@@ -1081,6 +1204,23 @@ button {
   }
   .services .card {
     max-width: 50%;
+  }
+  .prices__text {
+    font-size: clamp(14px, 4vw, 24px);
+    margin-bottom: 20px;
+  }
+  .prices .card {
+    max-width: 470px;
+    width: 100%;
+  }
+  .work-step__list {
+    flex-wrap: wrap;
+  }
+  .work-step__list .step {
+    padding-left: 20px;
+  }
+  .work-step__list--modify {
+    margin-top: 12px;
   }
 }
 @media (max-width: 690px) {
@@ -1179,6 +1319,17 @@ button {
   .services .cards .card__text {
     font-size: clamp(14px, 4vw, 20px);
   }
+  .work-step__list .step {
+    font-size: clamp(14px, 3vw, 28px);
+    padding-left: 10px;
+  }
+  .work-step__list .step::before {
+    font-size: clamp(36px, 8vw, 64px);
+    letter-spacing: -5px;
+  }
+  .work-step__list--modify {
+    margin-top: 12px;
+  }
 }
 @media (max-width: 480px) {
   .container {
@@ -1265,6 +1416,11 @@ button {
   .services .cards .card__text {
     font-size: clamp(14px, 4vw, 20px);
   }
+  .prices .card__content--bottom .button {
+    display: block;
+    width: 100%;
+    margin: 60px 0 0px;
+  }
 }
 @media (max-width: 360px) {
   .header .phone {
@@ -1306,5 +1462,21 @@ button {
     font-size: 14px;
     max-width: 300px;
     margin-bottom: 20px;
+  }
+  .prices__cards .card {
+    margin: 0 auto;
+  }
+  .prices__cards .card__content--bottom span {
+    font-size: 28px;
+  }
+  .prices__cards .card__content--bottom .button {
+    display: block;
+    width: 100%;
+  }
+  .work-step__list {
+    max-width: 100%;
+  }
+  .work-step__list .step {
+    padding-left: 5px;
   }
 }

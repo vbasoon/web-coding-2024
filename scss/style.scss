@@ -65,6 +65,10 @@ button {
   font-weight: 600;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .decor-image {
   position: absolute;
   z-index: -1;
@@ -418,13 +422,16 @@ button {
 }
 
 .prices {
+  
+  padding-top: 160px;
+
 
   .container {
     position: relative;
     .decor-image {
       &--vector2 {
-            top: 50px;
-            right: -200px;
+            top: -152px;
+            right: -100px;
             img {
               border: 1px solid green;
             }
@@ -450,20 +457,21 @@ button {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 60px 55px 88px;
+      padding: 60px 20px 88px;
       border: 2px solid #FFBA00;
       
       &__headling {
+        text-align: center;
         font-size: 36px;
         font-weight: 600;
-        margin-left: 54px;
+        //margin-left: 54px;
         margin-bottom: 40px;
       }
 
       .list {
-        margin-left: 100px;
+        margin-left: 10%;
         &__item {
-          max-width: 300px;
+          max-width: 100%;
           font-size: 24px;
           font-weight: 600;
           list-style-type: disc;
@@ -489,7 +497,7 @@ button {
         }
         
         .button {
-          width: 100%;
+          //width: 100%;
           display: block;
           background-color: #FFBA00;
           font-family: 'Inter', sans-serif;
@@ -497,7 +505,7 @@ button {
           font-weight: 500;
           line-height: 125%;
           color: #0C3E2E;
-          margin-top: 40px;
+          margin: 40px auto 0;
           padding: 20px 32px;
         }
       }
@@ -522,15 +530,18 @@ button {
   }
   margin-bottom: 150px;
   &__list {
-    max-width: 1070px;
+    
+    max-width: 100%;
     list-style-type: none;
     counter-reset: my-counter;
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
     .step {
-      //display: flex;
+      border: 1px solid green;
+      max-width: 100%;
+      display: flex;
       position: relative;
       line-height: 185px;
       font-size: 28px;
@@ -565,6 +576,9 @@ button {
       //   -webkit-text-stroke: 0.25px #0C3E2E;
       //   margin-left: 50px;
       // }
+    }
+    &--modify {
+      counter-reset: my-counter 3;
     }
   }
 }
@@ -940,19 +954,36 @@ button {
     
   }
 
-  .why_we {
+  // .why_we {
     
-    .content {
-      .list {
-        &-item {
-          font-size: clamp(14px, 3vw, 28px);
-          padding-left: 0;
-        }
-      }
-    }
+  //   .content {
+  //     .list {
+  //       &-item {
+  //         font-size: clamp(14px, 3vw, 28px);
+  //         padding-left: 0;
+  //       }
+  //     }
+  //   }
 
   
-  }
+  // }
+
+  // .work-step {
+    
+  //   &__list {
+  //     //flex: 1 3 80%;
+  //     max-width: 100%;
+      
+  //     .step {
+  //       font-size: clamp(32px, 6vw, 28px);
+  //       border: 2px solid red;
+  //       padding-left: 32px;
+  //       &::before {
+  //         font-size: clamp(64px, 8vw, 32px);
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 1200px) {
@@ -998,6 +1029,70 @@ button {
     }
     
   }
+
+  .prices {
+    &__text {
+      max-width: 880px;
+      font-size: 28px;
+    }
+    .card {
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .list {
+      margin-left: 0%;
+    }
+    }
+    
+  }
+
+  .work-step {
+  
+  margin-bottom: 150px;
+  &__list {
+    max-width: 100%;
+    gap: 12px;
+    .step {
+      
+      line-height: 185px;
+      font-size: 28px;
+      //align-items: center;
+      //border: 2px solid green;
+      padding-left: 32px;
+
+      &:last-child {
+        margin-left: 0px;
+      }
+      
+      
+      &::before {
+        content: counter(my-counter, decimal-leading-zero);
+        counter-increment: my-counter;
+        font-size: 96px;
+        font-family: 'Kaisei Decol', serif;
+        color: rgba(27, 208, 53, 0.10);
+        -webkit-text-stroke: 0.25px #0C3E2E;
+        font-weight: 400;
+        letter-spacing: -12px;
+        position: absolute;
+        left: -0px;
+        
+      }
+      
+      // span {
+      //   font-family: 'Kaisei Decol', serif;
+      //   font-weight: 400;
+      //   font-size: 128px;
+      //   color: rgba(109, 151, 115, 0.20);
+      //   -webkit-text-stroke: 0.25px #0C3E2E;
+      //   margin-left: 50px;
+      // }
+    }
+    &--modify {
+      counter-reset: my-counter 3;
+    }
+  }
+}
 
   }
 
@@ -1063,6 +1158,19 @@ button {
   .services {
     padding-top: 64px;
   }
+
+  // .work-step {
+  //   &__list {
+  //     max-width: 100%;
+  //     .step {
+  //       font-size: 24px;
+  //       padding-left: 32px;
+  //       &::before {
+  //         font-size: 96px;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 
@@ -1221,7 +1329,93 @@ button {
 //   right: 100px;
 // }
 
+.prices {
+  // padding-left: 0px;
+  // padding-right: 0px;
+  &__text {
+    margin-bottom: 50px;
+  }
+  &__cards {
+    gap: 10px;
+
+  }
+  .card {
+    padding: 40px 20px;
+    //padding-right: 0;
+    min-height: auto;
+    .list {
+      margin-left: 10px;
+      &__item {
+        //max-width: 100%;
+        font-weight: 400;
+        font-size: 22px;
+      }
+    }
+
+  }
+}
+
+.work-step {
   
+  margin-bottom: 150px;
+  &__list {
+    max-width: 100%;
+    gap: 12px;
+    .step {
+      
+      line-height: 185px;
+      font-size: clamp(24px, 3vw, 18px);
+      //align-items: center;
+      //border: 2px solid green;
+      padding-left: 32px;
+
+      &:last-child {
+        margin-left: 0px;
+      }
+      
+      
+      &::before {
+        
+        font-size: 96px;
+        
+        letter-spacing: -12px;
+        
+        left: -0px;
+        
+      }
+      
+      // span {
+      //   font-family: 'Kaisei Decol', serif;
+      //   font-weight: 400;
+      //   font-size: 128px;
+      //   color: rgba(109, 151, 115, 0.20);
+      //   -webkit-text-stroke: 0.25px #0C3E2E;
+      //   margin-left: 50px;
+      // }
+    }
+    &--modify {
+      counter-reset: my-counter 3;
+    }
+  }
+}
+
+  
+}
+
+@media (max-width: 890px) {
+  .work-step {
+    &__list {
+      max-width: 100%;
+      .step {
+        max-width: 90%;
+        font-size: 22px;
+        padding-left: 32px;
+        &::before {
+          font-size: 64px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 840px) {
@@ -1317,12 +1511,50 @@ button {
         }
     }
   }
+
+  .prices {
+    &__text {
+      font-size: 24px;
+      //max-width: 900px;
+    }
+    &__cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      .card {
+        max-width: 470px;
+        &__headling {
+          font-size: clamp(24px, 4vw, 28px);
+        }
+        .list {
+          &__item {
+            font-size: clamp(14px, 4vw, 18px);
+          }
+        }
+      }
+    }
+  }
+  .work-step {
+    &__list {
+      // max-width: 100%;
+      .step {
+        //max-width: 90%;
+        font-size: 20px;
+        line-height: 85px;
+        padding-left: 32px;
+        &::before {
+          font-size: 64px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    max-width: 688px;
-    //padding: 40px 0;
+    //max-width: 688px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .section {
@@ -1453,14 +1685,6 @@ button {
 }
 
 .services {
-    padding-top: 36px;
-    padding-bottom: 36px;
-    &__text {
-      
-    }
-  }
-
-.services {
   padding-top: 36px;
   padding-bottom: 36px;
     &__text {
@@ -1486,9 +1710,51 @@ button {
     
   }
 
+.prices {
+  
+  &__text {
+    font-size: clamp(14px, 4vw, 24px);
+    margin-bottom: 20px;
+  }
+  &__cards {
+    // gap: 10px;
+
+  }
+  .card {
+    max-width: 470px;
+    width: 100%;
+    
+    // .list {
+    //   margin-left: 10px;
+    //   &__item {
+    //     //max-width: 100%;
+    //     font-weight: 400;
+    //     font-size: 22px;
+    //   }
+    }
+
+  }
+
+.work-step {
+    &__list {
+      //max-width: 100%;
+      flex-wrap: wrap;
+      .step {
+        //max-width: 100%;
+        // font-size: clamp(14px, 3vw, 28px);
+        // line-height: 80px;
+        padding-left: 20px;
+        &::before {
+          // font-size: clamp(36px, 8vw, 64px);
+        }
+      }
+
+      &--modify {
+        margin-top: 12px;
+      }
+    }
+  }
 }
-
-
 
 @media (max-width: 690px) {
   .header {
@@ -1643,6 +1909,45 @@ button {
     }
     
   }
+
+  // .work-step {
+  //   &__list {
+  //     max-width: 100%;
+  //     .step {
+  //       //max-width: 100%;
+  //       font-size: clamp(14px, 3vw, 28px);
+  //       line-height: 80px;
+  //       padding-left: 40px;
+  //       &::before {
+  //         font-size: clamp(36px, 8vw, 64px);
+  //       }
+  //     }
+  //   }
+  // }
+
+  .work-step {
+    &__list {
+      //max-width: 100%;
+      
+      .step {
+        //max-width: 100%;
+        font-size: clamp(14px, 3vw, 28px);
+        
+        // line-height: 80px;
+        padding-left: 10px;
+        //border: 2px solid red;
+        &::before {
+          font-size: clamp(36px, 8vw, 64px);
+          letter-spacing: -5px;
+        }
+      }
+
+      &--modify {
+        margin-top: 12px;
+      }
+    }
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -1814,6 +2119,26 @@ button {
     
   }
 
+  .prices {
+
+    &__text {
+      
+    }
+    &__cards {
+      
+    }
+    .card {
+      &__content--bottom {
+        .button {
+          display: block;
+          width: 100%;
+          margin: 60px 0 0px;
+          //margin-top: 0px;
+        }
+      }
+      
+    }
+  }
 }
 
   @media (max-width: 360px) {
@@ -1884,7 +2209,45 @@ button {
         max-width: 300px;
         margin-bottom: 20px;
       }
+  }
+
+  .prices {
+    &__text {}
+    &__cards {
+      .card {
+        margin:0 auto;
+        &__headling {}
+        .list {
+          
+        }
+        &__content--bottom {
+          
+          span {
+
+            font-size: 28px;
+          }
+          .button {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
     }
+  }
+
+  .work-step {
+    &__list {
+      max-width: 100%;
+      .step {
+        // max-width: 90%;
+        //font-size: 50%;
+        padding-left: 5px;
+        &::before {
+          //font-size: 64px;
+        }
+      }
+    }
+  }
   
 
     
