@@ -3,7 +3,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -340,9 +342,6 @@ button {
   top: -152px;
   right: -100px;
 }
-.prices .container .decor-image--vector2 img {
-  border: 1px solid green;
-}
 .prices__text {
   max-width: 100%;
   font-size: 28px;
@@ -359,7 +358,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 60px 20px 88px;
+  padding: 60px 0px 88px;
   border: 2px solid #FFBA00;
 }
 .prices__cards .card__headling {
@@ -369,6 +368,7 @@ button {
   margin-bottom: 40px;
 }
 .prices__cards .card .list {
+  max-width: 100%;
   margin-left: 10%;
 }
 .prices__cards .card .list__item {
@@ -380,6 +380,10 @@ button {
 }
 .prices__cards .card .list__item:last-child {
   margin-bottom: 60px;
+}
+.prices__cards .card .list--center {
+  max-width: 100%;
+  margin-left: 30%;
 }
 .prices__cards .card__content--bottom {
   text-align: center;
@@ -405,18 +409,12 @@ button {
   padding: 20px 32px;
 }
 
-.work-step {
-  margin-bottom: 150px;
-}
 .work-step .container {
   position: relative;
 }
 .work-step .container .decor-image--leaf2 {
   top: 200px;
   right: -200px;
-}
-.work-step .container .decor-image--leaf2 img {
-  border: 1px solid green;
 }
 .work-step__list {
   max-width: 100%;
@@ -427,7 +425,6 @@ button {
   gap: 16px;
 }
 .work-step__list .step {
-  border: 1px solid green;
   max-width: 100%;
   display: flex;
   position: relative;
@@ -464,6 +461,9 @@ button {
 }
 .team__text p {
   max-width: 524px;
+}
+.team__text p span {
+  display: none;
 }
 .team__cards {
   display: flex;
@@ -720,7 +720,8 @@ button {
 .footer .logo img {
   width: 137px;
   height: 87px;
-  margin-bottom: 42px;
+  margin-top: 12px;
+  margin-bottom: 16px;
 }
 .footer__slogan {
   max-width: 230px;
@@ -728,7 +729,7 @@ button {
   font-weight: 600;
 }
 
-/*--------Swiper-------------------------------------*/
+/*--------Swiper-slider1---------------------*/
 .swiper {
   width: 100%;
   height: 300px;
@@ -756,12 +757,48 @@ button {
   transform: translateX(70%);
 }
 
+/*--------Swiper-slider2-------------------*/
+.swiper2 {
+  width: 100%;
+  height: 500px;
+  padding-bottom: 50px;
+}
+
+.team-slider__control {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.review-prev,
+.review-next {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.review-prev {
+  transform: translateX(-100%);
+}
+
+.review-next {
+  transform: translateX(70%);
+}
+
 /*--------Media Quaires--------------------------------*/
 @media (max-width: 1440px) {
   .header {
     background-image: url("../images/header-svg.svg");
     background-repeat: no-repeat;
     background-position: top center;
+  }
+  .team__text {
+    margin-left: 10%;
+    gap: 0px;
+  }
+  .team__text p {
+    max-width: 495px;
+    align-self: auto;
   }
 }
 @media (max-width: 1200px) {
@@ -790,15 +827,9 @@ button {
     max-width: 880px;
     font-size: 28px;
   }
-  .prices .card {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .prices .card .list {
-    margin-left: 0%;
-  }
-  .work-step {
-    margin-bottom: 150px;
+  .prices .card .list--center {
+    max-width: 100%;
+    margin-left: 30%;
   }
   .work-step__list {
     max-width: 100%;
@@ -854,6 +885,17 @@ button {
   }
   .services {
     padding-top: 64px;
+  }
+  .team__text {
+    margin-left: 5%;
+    gap: 10px;
+  }
+  .team__text p {
+    max-width: 495px;
+    align-self: auto;
+  }
+  .team__cards {
+    gap: 40px;
   }
 }
 @media (max-width: 998px) {
@@ -960,8 +1002,9 @@ button {
     font-weight: 400;
     font-size: 22px;
   }
-  .work-step {
-    margin-bottom: 150px;
+  .prices .card .list--center {
+    max-width: 100%;
+    margin-left: 25%;
   }
   .work-step__list {
     max-width: 100%;
@@ -981,7 +1024,19 @@ button {
     left: 0px;
   }
   .work-step__list--modify {
+    margin-top: 12px;
     counter-reset: my-counter 3;
+  }
+  .team__text {
+    margin-left: 2%;
+    gap: 20px;
+  }
+  .team__text p {
+    max-width: 495px;
+    align-self: auto;
+  }
+  .team__cards {
+    gap: 40px;
   }
 }
 @media (max-width: 890px) {
@@ -995,6 +1050,21 @@ button {
   }
   .work-step__list .step::before {
     font-size: 64px;
+  }
+  .prices .card__headling {
+    font-size: 32px;
+  }
+  .team__text {
+    display: block;
+  }
+  .team__text .text__hidden {
+    display: none;
+  }
+  .team__text p {
+    max-width: 100%;
+  }
+  .team__text p span {
+    display: inline;
   }
 }
 @media (max-width: 840px) {
@@ -1097,6 +1167,29 @@ button {
   }
   .work-step__list .step::before {
     font-size: 64px;
+  }
+  .team__text {
+    max-width: 652px;
+    display: block;
+    font-size: 18px;
+  }
+  .team__text .text__hidden {
+    display: none;
+  }
+  .team__text p {
+    max-width: 100%;
+  }
+  .team__text p span {
+    display: inline;
+  }
+  .team__cards {
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .team__cards .member__descr {
+    font-size: 14px;
+    text-align: left;
   }
 }
 @media (max-width: 768px) {
@@ -1222,6 +1315,69 @@ button {
   .work-step__list--modify {
     margin-top: 12px;
   }
+  .team .team__text p span {
+    display: inline;
+  }
+  .team .slider__wrapper .card {
+    max-width: 600px;
+    font-size: 24px;
+  }
+  .team .slider__wrapper .card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    min-height: 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .team .slider__wrapper .card__header .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .team .slider__wrapper .card__content {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .footer {
+    background-color: rgba(27, 208, 53, 0.1);
+    padding: 40px 0 47px;
+  }
+  .footer__inner {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__left {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__right {
+    flex: 1 1 50%;
+    padding-left: 30px;
+  }
+  .footer .menu__item {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .footer .social {
+    display: flex;
+    gap: 16px;
+  }
+  .footer .logo img {
+    width: 137px;
+    height: 87px;
+    margin-bottom: 20px;
+  }
+  .footer__slogan {
+    max-width: 200px;
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 @media (max-width: 690px) {
   .header .hero {
@@ -1273,6 +1429,28 @@ button {
   }
   .why_we .content .list-item {
     margin-bottom: 40px;
+  }
+  .team__text {
+    max-width: 652px;
+    display: block;
+    font-size: 18px;
+  }
+  .team__text .text__hidden {
+    display: none;
+  }
+  .team__text p {
+    max-width: 100%;
+  }
+  .team__text p span {
+    display: inline;
+  }
+  .team__cards {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .team__cards .member__descr {
+    font-size: 14px;
+    text-align: left;
   }
 }
 @media (max-width: 550px) {
@@ -1329,6 +1507,67 @@ button {
   }
   .work-step__list--modify {
     margin-top: 12px;
+  }
+  .team__text {
+    max-width: 652px;
+    display: block;
+    font-size: 18px;
+  }
+  .team__text .text__hidden {
+    display: none;
+  }
+  .team__text p {
+    max-width: 100%;
+  }
+  .team__text p span {
+    display: inline;
+  }
+  .team__cards {
+    flex-wrap: nowrap;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  .team__cards .member__descr {
+    font-size: 14px;
+    text-align: left;
+  }
+  .footer {
+    background-color: rgba(27, 208, 53, 0.1);
+    padding: 40px 0 47px;
+  }
+  .footer__inner {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__left {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__right {
+    flex: 1 1 50%;
+    padding-left: 30px;
+  }
+  .footer .menu__item {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .footer .social {
+    display: flex;
+    gap: 16px;
+  }
+  .footer .logo img {
+    width: 137px;
+    height: 87px;
+    margin-bottom: 16px;
+  }
+  .footer__slogan {
+    max-width: 160px;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 @media (max-width: 480px) {
@@ -1420,6 +1659,46 @@ button {
     display: block;
     width: 100%;
     margin: 60px 0 0px;
+    padding: 20px 30px;
+  }
+  .footer {
+    background-color: rgba(27, 208, 53, 0.1);
+    padding: 40px 0 47px;
+  }
+  .footer__inner {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__left {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+  }
+  .footer__right {
+    flex: 1 1 50%;
+    padding-left: 0px;
+    align-items: flex-start;
+  }
+  .footer .menu__item {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .footer .social {
+    display: flex;
+    gap: 16px;
+  }
+  .footer .logo img {
+    width: 137px;
+    height: 87px;
+    margin-bottom: 45px;
+  }
+  .footer__slogan {
+    max-width: 200px;
+    font-weight: 600;
   }
 }
 @media (max-width: 360px) {
@@ -1464,7 +1743,12 @@ button {
     margin-bottom: 20px;
   }
   .prices__cards .card {
+    padding: 20px 0px;
     margin: 0 auto;
+  }
+  .prices__cards .card .list {
+    max-width: 300px;
+    margin-left: 10%;
   }
   .prices__cards .card__content--bottom span {
     font-size: 28px;
@@ -1472,11 +1756,53 @@ button {
   .prices__cards .card__content--bottom .button {
     display: block;
     width: 100%;
+    font-size: 16px;
+    padding: 20px 0px;
+    border-radius: 4px;
   }
   .work-step__list {
     max-width: 100%;
   }
   .work-step__list .step {
     padding-left: 5px;
+  }
+  .footer {
+    background-color: rgba(27, 208, 53, 0.1);
+    padding: 40px 0 47px;
+  }
+  .footer__inner {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__left {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0px;
+  }
+  .footer__right {
+    flex: 1 1 50%;
+    padding-left: 0px;
+    align-items: flex-start;
+  }
+  .footer .menu__item {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .footer .social {
+    display: flex;
+    gap: 16px;
+  }
+  .footer .logo img {
+    width: 137px;
+    height: 87px;
+    margin-bottom: 26px;
+  }
+  .footer__slogan {
+    max-width: 200px;
+    font-weight: 600;
   }
 }
